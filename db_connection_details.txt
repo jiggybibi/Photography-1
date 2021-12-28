@@ -1,0 +1,12 @@
+Connection Details 
+Name:  remote sql 
+Host: b8a7waa1fvcl4tbomcyr-mysql.services.clever-cloud.com 
+Port: 3306 
+Login User: un64gyw23ckdnkzw 
+Current User: un64gyw23ckdnkzw@% 
+SSL cipher: TLS_AES_256_GCM_SHA384 
+Server 
+Product: Exherbo 
+Version: 8.0.22-13 
+Connector 
+Version: C++ 8.0.27
