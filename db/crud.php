@@ -9,10 +9,10 @@
 
         }
         // function to insert a new record into the attendee database
-        public function insertphotgraphers($fname, $lname, $address, $email, $contact, $brand, $doa, $avatar_path){
+        public function insertphotgraphers($fname, $lname, $address, $email, $doa, $contact, $brand, $avatar_path){
             try {
                 //define sql statement to be executed
-                $sql = "INSERT INTO photgraphers (firstname,lastname, address,emailaddress,contactnumber,brand_id,dateofacquisition,avatar_path) VALUES (:fname, :lname, :email, :contact, :brand, :doa, :avatar_path)";
+                $sql = "INSERT INTO photgraphers (firstname,lastname, 'address',emailaddress,contactnumber,brand_id,dateofacquisition,avatar_path) VALUES (:fname, :lname, ':address', :email,:doa, :contact, :brand, :avatar_path)";
                 //prepare the sql statement for execution
                 $stmt = $this->db->prepare($sql);
                 //bind all placeholders to the actual values
@@ -70,7 +70,7 @@
             }
         }
 
-        public function getphotphotographer($id){
+        public function getphotgraphers($id){
             try{
                 $sql = "select * from photgraphers a inner join brand s on a.brand_id = s.brand_id where photographer_id = :id";
                 $stmt = $this->db->prepare($sql);

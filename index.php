@@ -54,8 +54,8 @@
         </div>
         
         <div class="mb-3">
-            <label for="phone" class="form-label">Contact Number</label>
-            <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" name="phone">
+            <label for="contact" class="form-label">Contact Number</label>
+            <input type="text" class="form-control" id="contact" aria-describedby="phoneHelp" name="phone">
             <div id="phoneHelp" class="form-text">Your contact number will never be shared.</div>
         </div> 
         <br/>

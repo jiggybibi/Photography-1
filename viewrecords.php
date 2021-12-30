@@ -6,7 +6,7 @@
     require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
     
-    $results = $crud->getphotographer();
+    $results =$crud->getphotgrapher();
 ?>
 <table class="table">
     <tr>

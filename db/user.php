@@ -18,7 +18,7 @@
                 } else {
                     $new_password = md5($password.$username);
                     //define sql statement to be executed
-                    $sql = "INSERT INTO user (username,password) VALUES (:username,:password)";
+                    $sql = "INSERT INTO users (username,password) VALUES (:username,:password)";
                     //prepare the sql statement for execution
                     $stmt = $this->db->prepare($sql);
                     //bind all placeholders to the actual values
@@ -39,7 +39,7 @@
 
         public function getUser($username,$password){
             try{
-                $sql = "select * from user where username = :username AND password = :password ";
+                $sql = "select * from users where username = :username AND password = :password ";
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':username', $username);
                 $stmt->bindparam(':password', $password);
@@ -54,7 +54,7 @@
 
         public function getUserbyUsername($username){
             try{
-                $sql = "select count(*) as num from user where username = :username ";
+                $sql = "select count(*) as num from users where username = :username ";
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':username', $username);
                 $stmt->execute();
@@ -66,5 +66,15 @@
             } 
         }
 
+        public function getUsers(){
+            try{
+                $sql = "SELECT * FROM users";
+                $result = $this->db->query($sql);
+                return $result;
+            }catch(PDOException $e){
+                echo $e->getMessage();
+                return false;
+            }
+        }
     }
 ?>

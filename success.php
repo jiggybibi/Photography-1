@@ -9,19 +9,21 @@
         $lname = $_POST['lastname'];
         $address = $_POST['address'];
         $email = $_POST['email'];
-        $contact = $_POST['phone'];
+        $contact = $_POST['contact'];
         $brand = $_POST['brand'];
         $doa = $_POST['doa'];
+        $avatar = $_POST['avatar'];
+        
 
-        //$orig_file = $_FILES ["avatar"]["tmp_name"]; 
-        //$ext = pathinfo($_FILES ["avatar"]["name"], PATHINFO_EXTENSION);
-        $target_dir = 'uploads/';
+        $orig_file = $_FILES["avatar"]["tmp_name"];
+        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+        $target_dir = 'Uploads/';
         $destination = "$target_dir$contact.$ext";
         move_uploaded_file($orig_file,$destination);
 
         
          //Call function to insert and track if success or not 
-        $isSuccess = $crud->insertphotographer($fname, $lname, $address,$email, $contact, $brand, $doa,$avatar_path);
+        $isSuccess = $crud->insertphotgraphers($fname, $lname, $address, $email, $contact, $brand, $doa,$avatar);
         $brandName = $crud->getbrandById($brand);
 
         if($isSuccess){

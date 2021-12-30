@@ -24,7 +24,7 @@
 
 <h1 class="text-center"><?php echo $title ?> </h1>
 
-    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
+    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <table class="table table-sm">
             <tr>
                 <td><label for="username">Username: * </label></td>
