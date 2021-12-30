@@ -13,7 +13,7 @@
     $pass = 'kfvflcgjlohsdzqtvftg';
     $charset = 'utf8mb4';
 
-    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+    $dsn = "mysql:host=$bsc5mqbgau2hr6kfrnbz-mysql.services.clever-cloud.com;dbname=$bsc5mqbgau2hr6kfrnbz;charset=$utf8mb4";
 
     try{
         $pdo = new PDO($dsn, $user, $pass);
