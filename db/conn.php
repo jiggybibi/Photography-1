@@ -1,17 +1,17 @@
 <?php 
     //development connection
-    $host = '127.0.0.1';
-    $db = 'photography_db';
-    $user = 'root';
-    $pass = '';
-    $charset = 'utf8mb4';
+    // $host = '127.0.0.1';
+    // $db = 'photography_db';
+    // $user = 'root';
+    // $pass = '';
+    // $charset = 'utf8mb4';
 
     //remote database connection
-    // $host = 'bsc5mqbgau2hr6kfrnbz-mysql.services.clever-cloud.com';
-    // $db = 'bsc5mqbgau2hr6kfrnbz'; 
-    // $user = 'unt3t46cqe6ew928';
-    // $pass = 'kfvflcgjlohsdzqtvftg';
-    // $charset = 'utf8mb4';
+    $host = 'bsc5mqbgau2hr6kfrnbz-mysql.services.clever-cloud.com';
+    $db = 'bsc5mqbgau2hr6kfrnbz'; 
+    $user = 'unt3t46cqe6ew928';
+    $pass = 'kfvflcgjlohsdzqtvftg';
+    $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
